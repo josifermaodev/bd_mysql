@@ -39,6 +39,14 @@ SELECT nome, preco FROM tb_produtos;
 
 SELECT * FROM tb_produtos WHERE id = 1;
 
+SELECT * FROM tb_produtos WHERE preco > 4.00;
+
+SELECT * FROM tb_produtos WHERE preco > 2.00 AND nome = "Repolho";
+
+SELECT * FROM tb_produtos WHERE preco > 5.00 OR nome = "Tomate";
+
+SELECT * FROM tb_produtos WHERE nome != "Tomate";
+
 SELECT nome, CONCAT('R$ ', FORMAT(preco, 2, 'pt_BR')) AS Preço FROM tb_produtos;
 
 SELECT nome, DATE_FORMAT(data_validade, '%d/%m/%y') AS Data_Validade FROM tb_produtos;
